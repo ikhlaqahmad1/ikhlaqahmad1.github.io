@@ -1,1 +1,1 @@
-# ikhlaqahmad1.github.io
+# ikhlaqahmad.github.io

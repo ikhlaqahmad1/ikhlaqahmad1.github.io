@@ -1,40 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
+    <script src="backend.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header id="main-bar">
+        <!-- Navbar -->
+        <nav class="menu-container">
+            <!-- burger menu -->
+            <input type="checkbox" aria-label="Toggle menu" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- logo -->
+            <a href="#" class="menu-logo">
+              <img src="https://wweb.dev/resources/navigation-generator/logo-placeholder.png" alt="My Awesome Website"/>
+            </a>
+          
+            <!-- menu items -->
+            <div class="menu">
+              <ul>
+                <li>
+                  <a href="#education">
+                    Education
+                  </a>
+                </li>
+                <li>
+                  <a href="#work">
+                    Work
+                  </a>
+                </li>
+                <li>
+                  <a href="#resume">
+                    Resume/CV
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#contact">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#about">
+                    About
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#blog">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
         </nav>
+
     </header>
+    
+    <div id="page1">
+      <h1>
+          <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I&#39;m Ikhlaq.", "I am a software engineer.", "I love coding and everything related to computers." ]'>
+            <span class="wrap"></span>
+          </a>
+      </h1>
+    </div>
+    <br>
+    <!---->
 
-    <section id="about">
-        <h2>About Me</h2>
+    <div id="page2">
+      <section id="about">
+        <h2>About</h2>
         <p>This is where you can introduce yourself, talk about your interests, skills, and experiences.</p>
-    </section>
-
-    <section id="portfolio">
+      </section>
+      <section id="portfolio">
         <h2>Portfolio</h2>
         <p>Showcase your projects, artworks, or anything else you want to share.</p>
-    </section>
+      </section>
 
-    <section id="contact">
+      <section id="contact">
         <h2>Contact</h2>
         <p>Provide ways for visitors to get in touch with you, like a contact form or social media links.</p>
-    </section>
-
-    <footer>
+      </section>
+    </div>
+    <div id="page3">
+      <footer>
         <p>&copy; 2024 My Personal Website</p>
-    </footer>
+      </footer>
+    </div>
+    
 </body>
 </html>
