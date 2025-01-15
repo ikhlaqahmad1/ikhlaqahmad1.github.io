@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Ikhlaq Ahmad</title>
+    <!--css-->
     <link rel="stylesheet" href="styles.css">
+    <!--icons pack-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
+
+    <!--Navbar-->
     <div class="navbar">
         <div class="navbar-header">
             <!--<div class="navbar-title">My Portfolio</div>-->
@@ -17,55 +23,49 @@
                 <div class="line"></div>
             </div>
         </div>
+
+        <!--All the sections-->
         <div class="nav-links" id="nav-links">
             <a href="#about" class="nav-link"><i class="fas fa-user"></i> About Me</a>
             <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
-            <a href="#research" class="nav-link"><i class="fas fa-flask"></i> Research</a>
             <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Work Experience</a>
             <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="#research" class="nav-link"><i class="fas fa-flask"></i> Research</a>
             <a href="#announcements" class="nav-link"><i class="fas fa-bullhorn"></i> Announcements</a>
             <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
             <a href="#cv" class="nav-link"><i class="fas fa-file-alt"></i> CV</a>
         </div>
     </div>
+
+    <!--About Me-->
     <div class="container">
         <div class="section" id="about">
             <div class="about-content">
-                
                 <img src="images/MyPic.jpg" alt="Profile Picture" class="profile-picture">
-                <h2> Hi, I'm Ikhlaq. I'm a Software Engineer!</h2>
+                <h3> Hi, I'm Ikhlaq. I'm a Software Engineer! I love to code and everything related to computers!</h3>
             </div>
         </div>
+
+    <!--Education-->
         <div class="section" id="education">
             <h2>Education</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus.</p>
+            <img src="images/emblem solid-cmyk.jpg" alt="University Logo" style="width: 100px; height: auto;">
+
+            <!--List of education-->
+            <ul style="list-style-position: inside; padding-left: 0;">
+                <li style="margin-bottom: 15px;">
+                    <strong>The University of Texas at Dallas, 01/2024 - Present<br></strong>
+                        Master of Science in Computer Science<br>
+                    <strong>Specialization: </strong> Intelligent Systems
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>The University of Texas at Dallas, 08/2021 - 12/2023<br></strong>
+                        Bachelor of Science in Computer Science
+                </li>
+            </ul>
         </div>
-        <div class="section" id="research">
-            <h2>Research</h2>
-            <div class="research-container">
-                <div class="research-box">
-                <img src="images/Flag.jpg" alt="Research Project 1" class="research-image">
-                <h3>Research Topic 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="research-box">
-                <img src="images/Flag.jpg" alt="Research Project 2" class="research-image">
-                <h3>Research Topic 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="research-container"></div>
-                <div class="research-box">
-                <img src="images/Flag.jpg" alt="Research Project 1" class="research-image">
-                <h3>Research Topic 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="research-box">
-                <img src="images/Flag.jpg" alt="Research Project 2" class="research-image">
-                <h3>Research Topic 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        </div>
+
+        <!--Experience-->
         <div class="section" id="experience">
             <h2>Work Experience</h2>
                 <div class="experience-list">
@@ -81,67 +81,95 @@
                         <p><strong>Duration:</strong> Month Year - Month Year</p>
                         <p>Responsibilities: Brief description of your responsibilities and achievements.</p>
                     </div>
-                    <div class="experience-item">
-                        <h3>Job Title 3</h3>
-                        <p>Company Name 3</p>
+                </div>
+        </div>
+
+        <!---Projects-->
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+                <div class="section-container">
+                    <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 1" class="section-image">
+                    <h3>Project Name</h3>
+                    <p>Brief description of Project 2. Explain its purpose and technologies used.</p>
+                        <a href="https://github.com/your-username/project2" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 2" class="section-image">
+                    <h3>Project Name</h3>
+                    <p>Brief description of Project 2. Explain its purpose and technologies used.</p>
+                        <a href="https://github.com/your-username/project2" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <div class="section-container"></div>
+                    <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 1" class="section-image">
+                    <h3>Project Name</h3>
+                    <p>Brief description of Project 2. Explain its purpose and technologies used.</p>
+                        <a href="https://github.com/your-username/project2" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+
+                <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 2" class="section-image">
+                    <h3>Project Name</h3>
+                    <p>Brief description of Project 2. Explain its purpose and technologies used.</p>
+                        <a href="https://github.com/your-username/project2" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Research-->
+        <div class="section" id="research">
+            <h2>Research</h2>
+            <div class="section-container">
+                <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 1" class="section-image">
+                    <h3>Research Topic 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="section-box">
+                    <img src="images/Flag.jpg" alt="Research Project 2" class="section-image">
+                    <h3>Research Topic 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Announcements-->
+        <div class="section" id="announcements">
+            <h2>Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement-item">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name 1</p>
+                        <p><strong>Duration:</strong> Month Year - Month Year</p>
+                        <p>Responsibilities: Brief description of your responsibilities and achievements.</p>
+                    </div>
+                    <div class="announcement-item">
+                        <h3>Job Title 2</h3>
+                        <p>Company Name 2</p>
                         <p><strong>Duration:</strong> Month Year - Month Year</p>
                         <p>Responsibilities: Brief description of your responsibilities and achievements.</p>
                     </div>
                 </div>
         </div>
-        <div class="section" id="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <h3>Project Title 1</h3>
-                    <p>Brief description of Project 1. Explain its purpose and technologies used.</p>
-                    <a href="https://github.com/your-username/project1" target="_blank" class="github-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-                <div class="project-item">
-                    <h3>Project Title 2</h3>
-                    <p>Brief description of Project 2. Explain its purpose and technologies used.</p>
-                    <a href="https://github.com/your-username/project2" target="_blank" class="github-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-                <div class="project-item">
-                    <h3>Project Title 3</h3>
-                    <p>Brief description of Project 3. Explain its purpose and technologies used.</p>
-                    <a href="https://github.com/your-username/project3" target="_blank" class="github-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="announcements">
-            <h2>Announcements</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus.</p>
-        </div>
 
-
-       
-
-
+        <!--Contact-->
         <div class="section" id="contact">
             <h2>Contact</h2>
-            <div class="contact-container">
-                <div class="contact-form">
-                    <h3>Get in Touch</h3>
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-        
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-        
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
+            <div class="contact-section">
+                <p>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:your-email@example.com">ikhlaq_ahmad1@outlook.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i> 
+                    <a href="tel:+1234567890">+1 678 848 5584</a>
+                </p>
             </div>
             <div class="social-links">
                 <h3>Connect with Me</h3>
@@ -157,10 +185,7 @@
             </div>
         </div>
 
-
-
-    
-
+    <!--script.js-->
     <script src="script.js"></script>
 </body>
 </html>
