@@ -97,6 +97,16 @@ body {
     transform: translateY(-5px) scale(1.03); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
+
+
+.about-me-item {
+    background: linear-gradient(145deg, #ffffff, #f7f7f7);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; 
+    padding: 20px; 
+}
 /* Education Container */
 .education-list {
     width: 100%;
