@@ -9,6 +9,7 @@
   --text-dim: rgba(0, 0, 0, 0.35);
   --text-dimmer: rgba(255,255,255,0.18);
   --accent-green: #00ffb4;
+  --accent-blue: rgb(88, 194, 255); /* ADDED: Kept inside your design token system */
   --font: 'Unbounded', sans-serif;
 }
 
@@ -72,26 +73,35 @@ nav#dynamic-nav ul {
   flex-direction: column;
   list-style: none;
   gap: 6px;
+  color: #000000
 }
 
 nav#dynamic-nav ul li { display: block; }
 
-nav#dynamic-nav ul a {
+/* 1. Base links (Defaults to your black text variable) */
+nav#dynamic-nav ul li a {
   font-size: 9px;
   font-weight: 300;
-  color: var(--text-dim);
+  color: var(--text) !important;
   text-decoration: none;
   letter-spacing: 0.08em;
   padding: 10px 14px;
   border-radius: 100px;
   display: block;
-  transition: color 0.2s, background 0.2s;
+  background: transparent !important;
 }
 
-nav#dynamic-nav ul a:hover,
-nav#dynamic-nav ul a.active {
-  color: var(--text);
-  background: rgba(255,255,255,0.08);
+/* 2. Hover state (Swaps to full black text instead of red) */
+nav#dynamic-nav ul a:hover {
+  color: var(--text) !important; 
+  text-shadow: 0.5px 0 0 var(--text), -0.5px 0 0 var(--text);
+}
+
+/* 3. Active Scroll state (Forces red, strips white script backgrounds) */
+nav#dynamic-nav ul li.active a {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
 }
 
 main section {
@@ -100,7 +110,6 @@ main section {
   padding: 5rem 2rem 5rem 8rem; /* Clears left bar space */
 }
 
-/* SCREEN ADJUSTMENT (Mobile & Tablets) */
 /* SCREEN ADJUSTMENT (Mobile & Tablets) */
 @media (max-width: 768px) {
   nav#dynamic-nav {
@@ -249,13 +258,14 @@ main section {
   .socials a { color: var(--text-dimmer); font-size: 15px; text-decoration: none; transition: color 0.2s; }
   .socials a:hover { color: #fff; }
 
-  /* DIVIDER */
-  .divider {
-    height: 1px;
-    background: var(--glass-border);
-    max-width: 900px;
-    margin: 0 auto;
-  }
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15); /* Sleek glass alternative to var(--glass-border) */
+  
+  width: 90%;          /* Leaves breathing room on mobile screens */
+  max-width: 900px;    /* Prevents it from getting too long on wide desktops */
+  margin: 0 auto;      /* Keeps it perfectly centered */
+}
 
 /* SECTION LABEL */
   .section-label {
@@ -346,6 +356,51 @@ main section {
   }
 }
 
+  /* EDUCATION */
+  .edu-list { display: flex; flex-direction: column; gap: 12px; }
+  .edu-card {
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1.5rem;
+    align-items: start;
+  }
+  .edu-school {
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #5a5a5a, #2c2c2c, #111111);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+  .edu-degree {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-dim);
+    /* letter-spacing: 0.03em; */
+    margin: 10px 0px;
+  }
+  .edu-desc {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--text-dim);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    max-width: 480px;
+  }
+  .edu-date {
+    font-size: 8px;
+    font-weight: 300;
+    color: linear-gradient(90deg, #5a5a5a, #2c2c2c, #111111);
+    letter-spacing: 0.1em;
+    text-align: right;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
   /* WORK EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 12px; }
   .exp-card {
@@ -392,7 +447,7 @@ main section {
   .exp-date {
     font-size: 8px;
     font-weight: 300;
-    color: var(--text-dimmer);
+    color: linear-gradient(90deg, #5a5a5a, #2c2c2c, #111111);
     letter-spacing: 0.1em;
     text-align: right;
     white-space: nowrap;
@@ -472,17 +527,10 @@ main section {
     gap: 2rem;
     min-height: 160px;
   }
-  .project-num {
-    font-size: 9px;
-    font-weight: 300;
-    color: var(--text-dimmer);
-    letter-spacing: 0.15em;
-    margin-bottom: 1.5rem;
-  }
   .project-name {
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color: #000000;
     letter-spacing: -0.5px;
     margin-bottom: 8px;
     line-height: 1.2;
@@ -512,48 +560,11 @@ main section {
     gap: 6px;
     transition: color 0.2s;
   }
-  .project-link:hover { color: #fff; }
+  .project-link:hover { color: #000000; }
 
 
 
-  /* EDUCATION */
-  .edu-list { display: flex; flex-direction: column; gap: 12px; }
-  .edu-card {
-    border-radius: 16px;
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.5rem 1.5rem;
-    align-items: start;
-  }
-  .edu-school {
-    font-size: 13px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
-  }
-  .edu-degree {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--text-dim);
-    /* letter-spacing: 0.03em; */
-    margin: 10px 0px;
-  }
-  .edu-desc {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--text-dimmer);
-    line-height: 1.7;
-    max-width: 480px;
-  }
-  .edu-date {
-    font-size: 10px;
-    font-weight: 300;
-    color: var(--text-dimmer);
-    letter-spacing: 0.1em;
-    text-align: right;
-    white-space: nowrap;
-  }
+
 
   /* BLOG */
   .blog-list { display: flex; flex-direction: column; gap: 2px; }
@@ -572,25 +583,25 @@ main section {
   .blog-title {
     font-size: 12px;
     font-weight: 400;
-    color: #fff;
+    color: #000000;
     letter-spacing: -0.2px;
     flex: 1;
   }
   .blog-date {
     font-size: 8px;
     font-weight: 300;
-    color: var(--text-dimmer);
+    color: #000000;
     letter-spacing: 0.1em;
     white-space: nowrap;
   }
-  .blog-arrow { color: var(--text-dimmer); font-size: 13px; }
+  .blog-arrow { color: #000000; font-size: 13px; }
 
   /* CONTACT */
   #contact { text-align: center; padding-bottom: 6rem; }
   .contact-heading {
     font-size: clamp(28px, 5vw, 48px);
     font-weight: 700;
-    color: #fff;
+    color: #000000;
     letter-spacing: -1.5px;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -598,7 +609,7 @@ main section {
   .contact-sub {
     font-size: 11px;
     font-weight: 300;
-    color: var(--text-dim);
+    color: #000000;
     letter-spacing: 0.05em;
     line-height: 1.7;
     max-width: 340px;
@@ -612,7 +623,7 @@ main section {
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.1em;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     padding: 16px 32px;
     border-radius: 100px;
@@ -626,7 +637,7 @@ main section {
   .contact-link {
     font-size: 9px;
     font-weight: 300;
-    color: var(--text-dim);
+    color: #000000;
     text-decoration: none;
     letter-spacing: 0.12em;
     display: flex;
@@ -634,7 +645,7 @@ main section {
     gap: 6px;
     transition: color 0.2s;
   }
-  .contact-link:hover { color: #fff; }
+  .contact-link:hover { color: #000000; }
 
   footer {
     text-align: center;
